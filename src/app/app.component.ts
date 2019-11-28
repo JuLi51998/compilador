@@ -11,6 +11,7 @@ export class AppComponent {
   textoIn: FormGroup;
   textoLexico: any;
   textoLineas: Array<string> = [];
+  elemento1: any;
   
   palabrasEnLenguaje: any = [];
   // palabrasFueraLenguaje: any = [];
@@ -37,7 +38,8 @@ export class AppComponent {
     }
     
     this.textoLineas.forEach(element => {
-      element.forEach(elemento => {
+      this.elemento1 = element;
+      this.elemento1.foreach(elemento => {
         for(let i = 0; i <= this.lenguaje.length; i++){
           if (this.lenguaje[i] == elemento) {
             this.palabrasEnLenguaje.push(elemento);
