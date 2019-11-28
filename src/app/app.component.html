@@ -1,15 +1,17 @@
 <div class="container">
   <div>
+    <h1>Compilador</h1>
     <form action="" [formGroup]="textoIn" (ngSubmit)="validate()">
       <div>
         <label for=""></label>
-        <div>
-            <textarea formControlName="palabra"></textarea>
+        <div class="form-group green-border-focus">
+          <label for="exampleFormControlTextarea5"></label>
+            <textarea class="form-control" formControlName="palabra"></textarea>
             <span></span>
         </div>
       </div>
       <div>
-        <input type="submit" value="enviar">
+        <input  class="btn btn-primary btn-lg" type="submit" value="Enviar">
       </div>
     </form>
   </div>
