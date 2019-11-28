@@ -49,12 +49,47 @@ export class AppComponent {
     this.sintactico(this.palabrasEnLenguaje);
   }
 
+
   sintactico(texto) {
-    console.log("estas en metodo 2", texto);
+
+    if (texto != null){
+    if(texto.includes("var")  || texto.includes("+") || texto.includes("-") || texto.includes("*") || texto.includes("/") || texto.includes("%")){
+       this.semantico(texto) 
+    }
   }
 
-  semantico() {
+  }
 
+  semantico(texto) {
+
+    if (texto.includes("var ="))
+    {
+      return true;
+    }
+    if(texto.includes("var + var"))
+    {
+      return true;
+    }
+    if(texto.includes("var - var"))
+    {
+      return true;
+    }
+    if(texto.includes("var * var"))
+    {
+      return true;
+    }
+    if(texto.includes("var / var"))
+    {
+      return true;
+    }
+    if(texto.includes("var % var"))
+    {
+      return true;
+    }
+    if(texto.includes("var = var"))
+    {
+      return true;
+    }
   }
 
   validate() {
